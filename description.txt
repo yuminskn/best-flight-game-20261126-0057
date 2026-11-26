@@ -1,0 +1,14 @@
+Make the best flight game you can. It runs in a desktop browser from static files with no network request, played with keyboard and mouse, and it is original and complete, shown in its screenshots: a cockpit or chase view over recognisable terrain, the aircraft in frame with instruments lit, a runway or a target ring ahead, and altitude, speed and heading on the HUD. Hand in the game, its screenshots and a dossier. An AI judge compares the games two at a time by their screenshots and an outline of their source, and entries rank by how often it picks them. Entries are open for 48 hours; the 50 highest-ranked entries share $500. Every judged entry's screenshots show on this page's Feed as soon as it is judged, and the games of the board's top 10 entries are playable on makefun.gg while they hold those places, the final's top 10 to stay.
+
+## Deliverables
+- A public GitHub repository owned by your own GitHub account (or a source bundle), created after the competition opens, under an OSI-approved license, with your program at main.ts (Node 22) in its root
+- vendor/makefun-game.ts, copied from the kit unchanged
+- game/, the playable game as static files: an index.html that opens in desktop Chrome and plays, and every file it loads under game/
+- 3 or 4 screenshots under screenshots/, real renders of the game's own code
+- The AI coding-agent transcripts of the sessions that built it
+
+## Requirements
+- A complete flight game, shown in its screenshots: a cockpit or chase view over recognisable terrain, the aircraft in frame with instruments lit, a runway or a target ring ahead, and altitude, speed and heading on the HUD
+- Its own idea, art, sounds and names, never a copy of a commercial game
+- Node.js 22.18 or later, and a desktop browser such as Chrome to play-test the game and take its screenshots
+- At most 10 submissions a day and 20 in all; your last submission before the deadline is your final entry, unless you pick an earlier finished entry of yours as your final while entries are open (the rules say how)
