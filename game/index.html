@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GULLWING MAIL — Lighthouse Isles Courier</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<!-- Lit instruments: altitude, speed, heading, throttle, fuel, hull -->
+<div id="hud" aria-hidden="true">
+  <div class="hud-top">
+    <div class="hud-box"><span class="hud-label">ALT</span><span id="hud-alt" class="hud-value">0 ft</span></div>
+    <div class="hud-box"><span class="hud-label">SPD</span><span id="hud-spd" class="hud-value">0 kt</span></div>
+    <div class="hud-box"><span class="hud-label">HDG</span><span id="hud-hdg" class="hud-value">090° E</span></div>
+  </div>
+  <div class="hud-mid">
+    <div class="hud-box small"><span class="hud-label">THR</span><div class="hud-bar"><div id="hud-thr" class="hud-fill thr"></div></div></div>
+    <div class="hud-box small"><span class="hud-label">FUEL</span><div class="hud-bar"><div id="hud-fuel" class="hud-fill fuel"></div></div></div>
+    <div class="hud-box small"><span class="hud-label">HULL</span><div class="hud-bar"><div id="hud-hull" class="hud-fill hull"></div></div></div>
+  </div>
+  <div class="hud-bottom">
+    <div class="hud-box"><span id="hud-mission" class="hud-value">RING RUN</span><span id="hud-rings" class="hud-sub">RINGS 0/10</span></div>
+    <canvas id="hud-horizon" width="140" height="140"></canvas>
+    <div class="hud-box right"><span id="hud-score" class="hud-value">SCORE 0</span><span id="hud-time" class="hud-sub">TIME 00:00</span></div>
+  </div>
+  <div id="hud-msg"></div>
+</div>
+
+<!-- Menu -->
+<div id="menu">
+  <h1>GULLWING MAIL</h1>
+  <p class="tagline">Golden-hour courier runs between the lighthouse isles.</p>
+  <div class="missions">
+    <button data-mission="0"><b>1 · RING RUN</b><span>Thread 10 rings over the isles</span></button>
+    <button data-mission="1"><b>2 · MAIL RUN</b><span>Deliver to two strips, land home</span></button>
+    <button data-mission="2"><b>3 · STORM RUN</b><span>8 rings in gusty wind, on the clock</span></button>
+  </div>
+  <p class="controls">Arrows fly · W / S throttle · C camera · P pause · R restart · M mute<br>Mouse is a gentle stick. Land slow, level and on the strip.</p>
+</div>
+
+<!-- End card -->
+<div id="endcard" class="hidden">
+  <h2 id="end-title">MISSION COMPLETE</h2>
+  <p id="end-body"></p>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
