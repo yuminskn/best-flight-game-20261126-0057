@@ -1,0 +1,61 @@
+/* GULLWING MAIL — HUD styling. Warm lit-instrument look, readable at a glance. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #1a2436; }
+body { font-family: "Segoe UI", system-ui, sans-serif; color: #ffe9a8; }
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+
+#hud { position: fixed; inset: 0; pointer-events: none; z-index: 5;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+.hud-top { position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 10px; }
+.hud-box { background: rgba(10, 18, 32, 0.55); border: 1px solid rgba(255, 233, 168, 0.45);
+  border-radius: 8px; padding: 6px 14px; text-align: center; backdrop-filter: blur(2px); }
+.hud-label { display: block; font-size: 11px; letter-spacing: 2px; opacity: 0.75; }
+.hud-value { display: block; font-family: "Consolas", monospace; font-size: 22px; font-weight: 700; }
+.hud-sub { display: block; font-family: "Consolas", monospace; font-size: 13px; opacity: 0.9; }
+.hud-mid { position: absolute; top: 14px; left: 14px; display: flex; flex-direction: column; gap: 8px; }
+.hud-box.small { padding: 5px 10px; text-align: left; min-width: 150px; }
+.hud-bar { height: 8px; background: rgba(255,255,255,0.15); border-radius: 4px; margin-top: 4px; overflow: hidden; }
+.hud-fill { height: 100%; border-radius: 4px; transition: width 0.15s linear; }
+.hud-fill.thr { background: #ffd76a; width: 0%; }
+.hud-fill.fuel { background: #4ecb71; width: 100%; }
+.hud-fill.hull { background: #58b7e6; width: 100%; }
+.hud-fill.low { background: #ff5a4e; }
+.hud-bottom { position: absolute; bottom: 16px; left: 16px; right: 16px;
+  display: flex; justify-content: space-between; align-items: flex-end; }
+.hud-box.right { text-align: right; }
+#hud-horizon { width: 120px; height: 120px; border-radius: 50%;
+  border: 2px solid rgba(255, 233, 168, 0.5); background: rgba(10, 18, 32, 0.4); }
+#hud-msg { position: absolute; top: 22%; left: 50%; transform: translateX(-50%);
+  font-size: 26px; font-weight: 700; letter-spacing: 1px; text-align: center;
+  opacity: 0; transition: opacity 0.25s; white-space: nowrap; }
+#hud-msg.show { opacity: 1; }
+
+#menu { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 18px;
+  background: linear-gradient(rgba(10,16,30,0.25), rgba(10,16,30,0.55)); text-align: center; }
+#menu h1 { font-size: 64px; letter-spacing: 10px; color: #ffe9a8;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.7); }
+#menu .tagline { font-size: 18px; opacity: 0.95; }
+#menu .missions { display: flex; gap: 14px; }
+#menu button { pointer-events: auto; cursor: pointer; width: 230px; padding: 16px 14px;
+  background: rgba(10, 18, 32, 0.72); color: #ffe9a8; border: 1px solid rgba(255, 233, 168, 0.6);
+  border-radius: 10px; font-size: 15px; text-align: left; }
+#menu button:hover { background: rgba(40, 60, 90, 0.85); }
+#menu button b { display: block; font-size: 17px; margin-bottom: 6px; letter-spacing: 1px; }
+#menu button span { opacity: 0.85; font-size: 13px; }
+#menu .controls { font-size: 14px; line-height: 1.7; opacity: 0.9; }
+
+#endcard { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 14px;
+  background: rgba(10, 16, 30, 0.45); text-align: center; }
+#endcard h2 { font-size: 44px; letter-spacing: 6px; text-shadow: 0 2px 14px rgba(0,0,0,0.8); }
+#endcard p { font-size: 19px; line-height: 1.8; }
+.hidden { display: none !important; }
+
+@media (max-width: 760px) {
+  #menu h1 { font-size: 38px; letter-spacing: 5px; }
+  #menu .missions { flex-direction: column; }
+  #hud-horizon { width: 96px; height: 96px; }
+  .hud-value { font-size: 17px; }
+}
