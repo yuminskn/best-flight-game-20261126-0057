@@ -3,7 +3,7 @@
 ## Status: READY TO SUBMIT (2026-11-26 ~11:30 Taiwan)
 - Repo: https://github.com/yuminskn/best-flight-game-20261126-0057 (public, branch main)
 - Competition: best-flight-game-20261126-0057, pot $500, top 50. Deadline **2026-11-28 08:57 Taiwan**.
-- Latest code commit on remote: **602eb819a0eb** (screenshots/04-storm.jpg). HANDOFF.md itself is pushed as a later commit — see the repo tree for the final HEAD.
+- Latest code commit on remote: **602eb819a0eb** (screenshots/04-storm.jpg). LICENSE pushed as 15da3190de8f (MIT, with SPDX line). HANDOFF.md itself is the final commit — see the repo tree for the HEAD SHA.
 - **This session (c8134d74-9edd-47a8-bfdb-0a43a0f01b68) ran NO `makefun` kit commands.** Submit is for the main session.
 
 ## How the code got into the repo (read this before touching git)
@@ -29,7 +29,7 @@ Golden-hour mail plane over a lighthouse island chain. Chase view, five islands 
 - screenshots/01-cover.jpg, 02-runway.jpg, 03-cockpit.jpg, 04-storm.jpg
 - .makefun/freshness.json (anchor: drand round 34285682, wallet 6gCNkG6Ld3n5BJo1Taw338ufizTnnbe3mPButb6TuA2x)
 - description.txt, rules.txt, capture.mjs, playtest.mjs, probe.mjs, ringprobe.mjs (tooling)
-- LICENSE (MIT) — local commit only, NOT on the remote (see above); the repo's LICENSE still needs pushing if the main session wants the local history preserved. Note: the kit's bundle does not require LICENSE in the remote tree for the game itself, but the competition requires an OSI license — confirm the remote has one before submitting.
+- LICENSE (MIT) — pushed to the remote as commit 15da3190de8f (file has the SPDX line, so the license_osi check passes).
 
 ## Submit (main session — do NOT run from this session)
 - Competition slug: best-flight-game-20261126-0057
@@ -42,6 +42,5 @@ Golden-hour mail plane over a lighthouse island chain. Chase view, five islands 
 - Known-good local CLI: ~/workspace/makefun/best-heist-game-20261122-0559-kit/cli/makefun.mjs (never download a new kit).
 
 ## Open items for the main session
-1. LICENSE is only in the local git history, not on the remote — confirm the remote repo carries an OSI license before submitting (the competition requires one).
-2. Submit before 2026-11-28 08:57 Taiwan. Target was 2026-11-27 evening — the entry is ready now, so submitting early is fine.
-3. The watchdog cron `watchdog-best-flight-game` still names the OLD builder agent d851026c; update it to this session c8134d74-9edd-47a8-bfdb-0a43a0f01b68 (or remove it now the build is done).
+1. Submit before 2026-11-28 08:57 Taiwan. Target was 2026-11-27 evening — the entry is ready now, so submitting early is fine.
+2. The watchdog cron `watchdog-best-flight-game` still names the OLD builder agent d851026c; update it to this session c8134d74-9edd-47a8-bfdb-0a43a0f01b68 (or remove it now the build is done).
